@@ -1,7 +1,0 @@
-# Mensagens Globais
-global:
-  argument:
-    type:
-      mismatch: Argument {0} must be of the type {1}.
-  parameter:
-    missing: Parameter {0} must be entered.

@@ -1,11 +1,11 @@
-package com.dvlima.archetype.business.entity;
+package com.dvlima.poc.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import com.dvlima.archetype.business.enummerator.SituacaoState;
+import com.dvlima.poc.enummerator.SituacaoState;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

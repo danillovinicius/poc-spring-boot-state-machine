@@ -1,11 +1,11 @@
-package com.dvlima.archetype.business.service;
+package com.dvlima.poc.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.dvlima.archetype.business.entity.Vaga;
-import com.dvlima.archetype.business.repository.VagaRepository;
+import com.dvlima.poc.entity.Vaga;
+import com.dvlima.poc.repository.VagaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -14,8 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.statemachine.StateMachine;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dvlima.archetype.business.enummerator.SituacaoEvent;
-import com.dvlima.archetype.business.enummerator.SituacaoState;
+import com.dvlima.poc.enummerator.SituacaoEvent;
+import com.dvlima.poc.enummerator.SituacaoState;
 
 @SpringBootTest
 class VagaServiceImplTest {
@@ -38,7 +38,7 @@ class VagaServiceImplTest {
 
   @Transactional
   @Test
-  void publicarVaga() {
+  public void publicarVaga() {
     Vaga savedVaga = vagaService.criarNovaVaga(vaga);
 
     System.out.println("Should be RASCUNHO");
@@ -56,7 +56,7 @@ class VagaServiceImplTest {
 
   @Transactional
   @RepeatedTest(5)
-  void inativarVaga() {
+  public void inativarVaga() {
     Vaga savedVaga = vagaService.criarNovaVaga(vaga);
 
     StateMachine<SituacaoState, SituacaoEvent> sm = vagaService.inativarVaga(savedVaga.getId());

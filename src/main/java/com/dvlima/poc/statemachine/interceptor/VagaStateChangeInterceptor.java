@@ -1,4 +1,4 @@
-package com.dvlima.archetype.business.interceptor;
+package com.dvlima.poc.statemachine.interceptor;
 
 import lombok.RequiredArgsConstructor;
 
@@ -9,11 +9,11 @@ import org.springframework.statemachine.support.StateMachineInterceptorAdapter;
 import org.springframework.statemachine.transition.Transition;
 import org.springframework.stereotype.Component;
 
-import com.dvlima.archetype.business.entity.Vaga;
-import com.dvlima.archetype.business.enummerator.SituacaoEvent;
-import com.dvlima.archetype.business.enummerator.SituacaoState;
-import com.dvlima.archetype.business.repository.VagaRepository;
-import com.dvlima.archetype.business.service.VagaServiceImpl;
+import com.dvlima.poc.entity.Vaga;
+import com.dvlima.poc.enummerator.SituacaoEvent;
+import com.dvlima.poc.enummerator.SituacaoState;
+import com.dvlima.poc.repository.VagaRepository;
+import com.dvlima.poc.service.VagaServiceImpl;
 
 import java.util.Optional;
 

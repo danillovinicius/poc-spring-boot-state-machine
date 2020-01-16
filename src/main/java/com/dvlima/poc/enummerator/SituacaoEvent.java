@@ -1,4 +1,4 @@
-package com.dvlima.archetype.business.enummerator;
+package com.dvlima.poc.enummerator;
 
 public enum SituacaoEvent {
   INATIVACAO,

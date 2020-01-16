@@ -1,4 +1,4 @@
-package com.dvlima.archetype;
+package com.dvlima.poc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,21 +1,17 @@
 # POC Spring boot State Machine
 
-How to run application
+## How to run application
 ---------------------------------------------
 ```bash
-## Build application from base directory
 mvn clean install
-
-## Run Spring boot application with embedded H2 database
 mvn spring-boot:run
-
-## Or if You want to run application with production profile
+## Profile
 mvn spring-boot:run -Dspring.profiles.active=prod
 ```
 
 ## Spring State Machine
 
-- Dependencies:
+- Dependências:
 
 ````xml
 <dependency>
@@ -25,21 +21,21 @@ mvn spring-boot:run -Dspring.profiles.active=prod
 </dependency>
 ````
 
-- Concept of a State Machine: 
-    - `Finite Automata`:
-        - Finite set of states
-        - Set of inputs
-        - Initial State
-        - Final State
-        - Transition Function. 
+- Conceito de uma máquina de estado: 
+    - `Autômatos finitos`:
+        - Conjunto finito de estados.
+        - Conjunto de entradas.
+        - Estado inicial.
+        - Estado final.
+        - Função de transição.
 
-- State Machine Terminology
-    - `States`: The specific state of the state machine. Finite and predetermined values. Enum.
-    - `Events`: Something that happens to the system - may or may not change the state.
-    - `Action`: The response of the State Machine to events. Can be changing variables, calling a method or changing to a different state.
-        - `Transitions`: Type of action which changes state. 
-    - `Guards`: Boolean conditions 
-    - `Extended State`: State Machine variables (in addition to state) 
+- Terminologia de uma máquina de estado:
+    - `States`: O estado específico da máquina de estados. Valores finitos e predeterminados.
+    - `Events`: Algo que acontece com o sistema - pode ou não alterar o estado.
+    - `Action`: A resposta da Máquina de Estado aos eventos. Pode estar mudando variáveis, chamando um método ou mudando para um estado diferente.
+        - `Transitions`: Tipo de ação que muda de estado. 
+    - `Guards`: Condições booleanas.
+    - `Extended State`: Variáveis ​​de máquina de estado (além do estado). 
 
 ## Exemplo: Candidatura em uma vaga de emprego.
 

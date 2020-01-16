@@ -8,6 +8,7 @@ spring:
     # schema: /sql/dev/schema-h2.sql
     # data: /sql/dev/data-h2.sql
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: create
   application:

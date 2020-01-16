@@ -1,4 +1,4 @@
-package com.dvlima.archetype.business.service;
+package com.dvlima.poc.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,14 +11,14 @@ import org.springframework.statemachine.support.DefaultStateMachineContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dvlima.archetype.business.entity.Vaga;
+import com.dvlima.poc.entity.Vaga;
 
-import static com.dvlima.archetype.business.enummerator.SituacaoEvent.*;
+import static com.dvlima.poc.enummerator.SituacaoEvent.*;
 
-import com.dvlima.archetype.business.enummerator.SituacaoEvent;
-import com.dvlima.archetype.business.enummerator.SituacaoState;
-import com.dvlima.archetype.business.interceptor.VagaStateChangeInterceptor;
-import com.dvlima.archetype.business.repository.VagaRepository;
+import com.dvlima.poc.enummerator.SituacaoEvent;
+import com.dvlima.poc.enummerator.SituacaoState;
+import com.dvlima.poc.statemachine.interceptor.VagaStateChangeInterceptor;
+import com.dvlima.poc.repository.VagaRepository;
 
 import java.time.LocalDateTime;
 

@@ -1,10 +1,10 @@
-package com.dvlima.archetype.business.service;
+package com.dvlima.poc.service;
 
 import org.springframework.statemachine.StateMachine;
 
-import com.dvlima.archetype.business.entity.Vaga;
-import com.dvlima.archetype.business.enummerator.SituacaoEvent;
-import com.dvlima.archetype.business.enummerator.SituacaoState;
+import com.dvlima.poc.entity.Vaga;
+import com.dvlima.poc.enummerator.SituacaoEvent;
+import com.dvlima.poc.enummerator.SituacaoState;
 
 import java.time.LocalDateTime;
 

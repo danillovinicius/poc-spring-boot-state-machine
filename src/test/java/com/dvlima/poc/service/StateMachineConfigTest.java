@@ -1,4 +1,4 @@
-package com.dvlima.archetype.business.statemachine;
+package com.dvlima.poc.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,8 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.statemachine.StateMachine;
 import org.springframework.statemachine.config.StateMachineFactory;
 
-import com.dvlima.archetype.business.enummerator.SituacaoEvent;
-import com.dvlima.archetype.business.enummerator.SituacaoState;
+import com.dvlima.poc.enummerator.SituacaoEvent;
+import com.dvlima.poc.enummerator.SituacaoState;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
