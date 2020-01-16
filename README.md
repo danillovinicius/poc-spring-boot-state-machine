@@ -24,10 +24,10 @@ mvn spring-boot:run -Dspring.profiles.active=prod
 - Conceito de uma máquina de estado: 
     - `Autômatos finitos`:
         - Conjunto finito de estados.
-        - Conjunto de entradas.
-        - Estado inicial.
-        - Estado final.
-        - Função de transição.
+        - Conjunto de entradas.
+        - Estado inicial.
+        - Estado final.
+        - Função de transição.
 
 - Terminologia de uma máquina de estado:
     - `States`: O estado específico da máquina de estados. Valores finitos e predeterminados.
