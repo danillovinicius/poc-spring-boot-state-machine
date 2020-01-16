@@ -1,27 +1,31 @@
 package com.dvlima.archetype.business.service;
 
-import lombok.extern.slf4j.Slf4j;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.statemachine.StateMachine;
 
 import com.dvlima.archetype.business.entity.Vaga;
-import com.dvlima.archetype.business.repository.VagaRepository;
-import com.dvlima.archetype.infrastructure.abstraction.crud.BaseCrudServiceImpl;
+import com.dvlima.archetype.business.enummerator.SituacaoEvent;
+import com.dvlima.archetype.business.enummerator.SituacaoState;
 
-@Slf4j
-@Service
-public class VagaService extends BaseCrudServiceImpl<Vaga, Long, VagaRepository> {
+import java.time.LocalDateTime;
 
-  private VagaRepository vagaRepository;
+public interface VagaService {
 
-  @Autowired
-  public VagaService(VagaRepository vagaRepository) {
-    this.vagaRepository = vagaRepository;
-  }
+  Vaga criarNovaVaga(Vaga vaga);
 
-  @Override
-  protected VagaRepository getRepository() {
-    return this.vagaRepository;
-  }
+  Vaga consultarVagaPorCodigo(Long vagaId);
+
+  StateMachine<SituacaoState, SituacaoEvent> publicarVaga(Long vagaId);
+
+  StateMachine<SituacaoState, SituacaoEvent> inativarVaga(Long vagaId);
+
+  StateMachine<SituacaoState, SituacaoEvent> prorrogarVaga(Long vagaId, LocalDateTime data);
+
+  StateMachine<SituacaoState, SituacaoEvent> habilitarCandidaturas(Long vagaId);
+
+  StateMachine<SituacaoState, SituacaoEvent> iniciarAnaliseCurricular(Long vagaId);
+
+  StateMachine<SituacaoState, SituacaoEvent> finalizarAnaliseCurricular(Long vagaId);
+
+  StateMachine<SituacaoState, SituacaoEvent> cancelarAnaliseCurricular(Long vagaId);
+
 }
